@@ -16,6 +16,6 @@ public interface TareaRepository extends JpaRepository<TareaEntity, Long> {
 
 	List<TareaEntity> findByFechaVencimientoAfter(LocalDate fecha);
 
-	List<TareaEntity> findByTituloContaining(String titulo);
+	List<TareaEntity> findByTituloContainingIgnoreCase(String titulo);
 
 }

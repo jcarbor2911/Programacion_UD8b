@@ -1,16 +1,13 @@
 INSERT INTO tarea (titulo, descripcion, fecha_creacion, fecha_vencimiento, estado) VALUES
-('Configurar entorno', 'Instalar JDK 21 y configurar variables de entorno', '2026-03-01', '2026-03-02', 'COMPLETADA'),
+-- Tareas Vencidas (Fechas anteriores a hoy)
 ('Diseñar esquema DB', 'Crear el diagrama entidad-relación inicial', '2026-03-01', '2026-03-05', 'COMPLETADA'),
-('Implementar Entidades', 'Crear clases JPA para Tarea y Usuario', '2026-03-05', '2026-03-10', 'EN_PROGRESO'),
-('Configurar Spring Security', 'Implementar autenticación básica y JWT', '2026-03-10', '2026-03-15', 'PENDIENTE'),
-('Crear Repositorios', 'Extender JpaRepository para las entidades', '2026-03-05', '2026-03-07', 'COMPLETADA'),
-('Desarrollar Servicios', 'Lógica de negocio para la gestión de tareas', '2026-03-10', '2026-03-20', 'EN_PROGRESO'),
-('Validación de DTOs', 'Añadir anotaciones @NotNull y @Size en inputs', '2026-03-12', '2026-03-14', 'PENDIENTE'),
-('Pruebas Unitarias', 'Testear el servicio de creación de tareas', '2026-03-15', '2026-03-18', 'PENDIENTE'),
-('Optimizar Queries', 'Revisar logs de Hibernate para evitar N+1', '2026-03-18', '2026-03-25', 'PENDIENTE'),
-('Maquetación UI', 'Crear el dashboard principal con Thymeleaf', '2026-03-08', '2026-03-12', 'EN_PROGRESO'),
-('Integrar Swagger', 'Documentar la API con OpenAPI 3', '2026-03-20', '2026-03-22', 'PENDIENTE'),
-('Corregir Bug Login', 'Resolver error al refrescar el token', '2026-03-21', '2026-03-21', 'EN_PROGRESO'),
-('Configurar CORS', 'Permitir peticiones desde el frontend local', '2026-03-02', '2026-03-03', 'COMPLETADA'),
-('Exportar a PDF', 'Funcionalidad para descargar reporte de tareas', '2026-03-22', '2026-03-30', 'PENDIENTE'),
-('Revisión de Código', 'Pull Request final del módulo de persistencia', '2026-03-25', '2026-03-26', 'PENDIENTE');
+('Estabilidad del PC', 'Ajustar Command Rate de RAM a 2T y voltaje a 1.350V del Ryzen 5 3600 tras pantallazos azules', '2026-01-15', '2026-01-20', 'PENDIENTE'),
+('Proyecto Java con Modelio', 'Generar clases base con Java Designer y completar constructores y lógica a mano', '2026-05-01', '2026-05-20', 'EN_PROGRESO'),
+
+-- Tareas No Vencidas (Fechas posteriores a hoy)
+('Estilar vista de productos', 'Aplicar diseño CSS moderno a la lista de productos usando el control flow de Angular', '2026-05-20', '2026-06-10', 'EN_PROGRESO'),
+('Optimizar JOINs en BBDD', 'Revisar las consultas SQL complejas para el esquema de la base de datos de entrenamiento', '2026-05-25', '2026-06-15', 'PENDIENTE'),
+('Expandir guion de vídeo', 'Ampliar texto del script sobre SaaS y CRM para llegar a la duración objetivo de 8 minutos de locución', '2026-05-26', '2026-06-05', 'PENDIENTE'),
+('Desarrollar controladores', 'Crear endpoints GET, POST, PUT y DELETE para la gestión de las tareas en Spring Boot', '2026-05-22', '2026-06-01', 'COMPLETADA'),
+('Validación de DTOs', 'Añadir anotaciones para verificar que los datos entrantes son correctos en la capa web', '2026-05-26', '2026-06-14', 'PENDIENTE'),
+('Pruebas en Postman', 'Testear todos los endpoints y verificar que devuelven los códigos HTTP correctos', '2026-05-26', '2026-06-02', 'PENDIENTE');

@@ -18,7 +18,7 @@ public class TareaService {
 	@Autowired
 	private TareaRepository tareaRepository;
 
-	// CRUD básico
+	// CRUD
 
 	public List<TareaEntity> findAll() {
 		return this.tareaRepository.findAll();
@@ -54,6 +54,10 @@ public class TareaService {
 
 	public TareaEntity update(long idTarea, TareaEntity t) {
 		TareaEntity tareaExistente = this.findById(idTarea);
+
+		if (t.getId() != 0 && idTarea != t.getId()) {
+			throw new TareaException("El ID del body y el ID del path no coinciden.");
+		}
 
 		if (t.getEstado() != null) {
 			throw new TareaException("No se puede modificar el estado de la tarea desde este endpoint.");
@@ -129,7 +133,7 @@ public class TareaService {
 	}
 
 	public List<TareaEntity> findByTitulo(String titulo) {
-		return this.tareaRepository.findByTituloContaining(titulo);
+		return this.tareaRepository.findByTituloContainingIgnoreCase(titulo);
 	}
 
 }
