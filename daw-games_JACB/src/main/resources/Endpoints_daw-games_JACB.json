@@ -1,463 +1,542 @@
 {
   "info": {
-    "_postman_id": "c9298295-3251-4eb3-bcfe-d8fab7a52bbf",
-    "name": "Endpoints daw-task JACB",
-    "description": "Colección final e integral de Postman para la API REST de gestión de tareas, incluyendo rutas felices y validaciones de errores según el enunciado y capturas.",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "53488663",
-    "_collection_link": "https://go.postman.co/collection/53488663-c9298295-3251-4eb3-bcfe-d8fab7a52bbf?source=collection_link"
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "Endpoints daw-games",
+    "description": "Colección completa de endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
-      "name": "GET /tareas",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "GET /tareas/{id}",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/1",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "POST /tareas",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"titulo\": \"Nueva tarea desde Postman\",\n    \"descripcion\": \"Esta es una tarea pendiente totalmente válida\",\n    \"fechaVencimiento\": \"2026-12-31\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+      "name": "CRUD",
+      "item": [
+        {
+          "name": "GET /juegos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos"]
             }
-          }
+          },
+          "response": []
         },
-        "url": {
-          "raw": "http://localhost:8080/tareas",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "PUT /tareas/{id}",
-      "request": {
-        "method": "PUT",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"id\": 1,\n    \"titulo\": \"Título modificado de forma correcta\",\n    \"descripcion\": \"Descripción actualizada correctamente\",\n    \"fechaVencimiento\": \"2026-11-15\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        {
+          "name": "GET /juegos/{id}",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "1"]
             }
-          }
+          },
+          "response": []
         },
-        "url": {
-          "raw": "http://localhost:8080/tareas/1",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "DELETE /tareas/{id}",
-      "request": {
-        "method": "DELETE",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/1",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "PUT /tareas/{id}/iniciar",
-      "request": {
-        "method": "PUT",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/2/iniciar",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "2",
-            "iniciar"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "PUT /tareas/{id}/completar",
-      "request": {
-        "method": "PUT",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/3/completar",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "3",
-            "completar"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "GET /tareas/pendientes",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/pendientes",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "pendientes"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "GET /tareas/en_progreso",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/en_progreso",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "en_progreso"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "GET /tareas/completadas",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/completadas",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "completadas"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "GET /tareas/vencidas",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/vencidas",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "vencidas"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "GET /tareas/no_vencidas",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/no_vencidas",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "no_vencidas"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "GET /tareas/titulo?titulo=----",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/titulo?titulo=Optimizar",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "titulo"
-          ],
-          "query": [
-            {
-              "key": "titulo",
-              "value": "Optimizar"
+        {
+          "name": "GET /juegos/{id} - No encontrado (error)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/999",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "999"]
             }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Obtener tarea por ID - No encontrada-Adicional",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/999",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "999"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Crear tarea - Con estado (error)-Adicional",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"titulo\": \"Tarea con estado manual\",\n    \"descripcion\": \"Debe fallar porque las reglas de negocio prohíben asignar estado en la creación\",\n    \"fechaVencimiento\": \"2026-12-31\",\n    \"estado\": \"EN_PROGRESO\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
+          },
+          "response": []
         },
-        "url": {
-          "raw": "http://localhost:8080/tareas",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Crear tarea - Fecha incorrecta (error)-Adicional",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"titulo\": \"Tarea con fecha pasada\",\n    \"descripcion\": \"Debe fallar porque la fecha de vencimiento es anterior a hoy\",\n    \"fechaVencimiento\": \"2025-12-31\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        {
+          "name": "POST /juegos",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"God of War\",\n  \"genero\": \"Accion\",\n  \"plataformas\": \"PS5, PC\",\n  \"precio\": 49.99,\n  \"descargas\": 5000000,\n  \"tipo\": \"BASE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/juegos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos"]
             }
-          }
+          },
+          "response": []
         },
-        "url": {
-          "raw": "http://localhost:8080/tareas",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Modificar tarea - Con estado (error)-Adicional",
-      "request": {
-        "method": "PUT",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"id\": 1,\n    \"titulo\": \"Intento de cambiar estado\",\n    \"descripcion\": \"Debe fallar porque no se permite modificar el estado desde aquí\",\n    \"fechaVencimiento\": \"2026-11-15\",\n    \"estado\": \"COMPLETADA\"\n}",
-          "options": {
-            "raw": {
-              "language": "json"
+        {
+          "name": "POST /juegos - Con fecha de lanzamiento",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Red Dead Redemption 2\",\n  \"genero\": \"Aventura\",\n  \"plataformas\": \"PC, PS4, Xbox One\",\n  \"precio\": 29.99,\n  \"descargas\": 45000000,\n  \"fechaLanzamiento\": \"2018-10-26\",\n  \"tipo\": \"BASE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/juegos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos"]
             }
-          }
+          },
+          "response": []
         },
-        "url": {
-          "raw": "http://localhost:8080/tareas/1",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "1"
-          ]
+        {
+          "name": "POST /juegos - Con completado (error)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Juego invalido\",\n  \"genero\": \"RPG\",\n  \"plataformas\": \"PC\",\n  \"precio\": 19.99,\n  \"descargas\": 1000000,\n  \"tipo\": \"BASE\",\n  \"completado\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/juegos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /juegos/{id}",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"The Witcher 3: Wild Hunt - Edicion Completa\",\n  \"genero\": \"RPG\",\n  \"plataformas\": \"PC, PS4, PS5, Xbox One, Switch\",\n  \"precio\": 14.99,\n  \"descargas\": 55000000,\n  \"fechaLanzamiento\": \"2015-05-19\",\n  \"tipo\": \"BASE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/juegos/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /juegos/{id} - Con completado (error)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"The Witcher 3\",\n  \"genero\": \"RPG\",\n  \"plataformas\": \"PC, PS4\",\n  \"precio\": 19.99,\n  \"descargas\": 50000000,\n  \"fechaLanzamiento\": \"2015-05-19\",\n  \"tipo\": \"BASE\",\n  \"completado\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/juegos/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /juegos/{id} - No encontrado (error)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Juego inexistente\",\n  \"genero\": \"RPG\",\n  \"plataformas\": \"PC\",\n  \"precio\": 9.99,\n  \"descargas\": 0,\n  \"tipo\": \"BASE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/juegos/999",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "999"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /juegos/{id}",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/15",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "15"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /juegos/{id} - No encontrado (error)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/999",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "999"]
+            }
+          },
+          "response": []
         }
-      },
-      "response": []
+      ]
     },
     {
-      "name": "Borrar tarea - No encontrada-Adicional",
-      "request": {
-        "method": "DELETE",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/999",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "999"
-          ]
+      "name": "Filtros",
+      "item": [
+        {
+          "name": "GET /juegos/genero",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/genero?genero=RPG",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "genero"],
+              "query": [
+                {
+                  "key": "genero",
+                  "value": "RPG"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /juegos/nombre",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/nombre?nombre=Witcher",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "nombre"],
+              "query": [
+                {
+                  "key": "nombre",
+                  "value": "Witcher"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /juegos/plataforma",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/plataforma?plataforma=PS5",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "plataforma"],
+              "query": [
+                {
+                  "key": "plataforma",
+                  "value": "PS5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /juegos/expansiones",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/expansiones",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "expansiones"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /juegos/dlc",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/dlc",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "dlc"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /juegos/base",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/base",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "base"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /juegos/precio",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/precio?min=0&max=20",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "precio"],
+              "query": [
+                {
+                  "key": "min",
+                  "value": "0"
+                },
+                {
+                  "key": "max",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /juegos/exitos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/exitos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "exitos"]
+            }
+          },
+          "response": []
         }
-      },
-      "response": []
+      ]
     },
     {
-      "name": "Iniciar tarea - No pendiente (error)-Adicional",
-      "request": {
-        "method": "PUT",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/4/iniciar",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "4",
-            "iniciar"
-          ]
+      "name": "Reto",
+      "item": [
+        {
+          "name": "PUT /juegos/{id}/completar - Toggle (1a vez marca)",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/4/completar",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "4", "completar"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /juegos/{id}/completar - Toggle (2a vez desmarca)",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/4/completar",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "4", "completar"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /juegos/{id}/completar - No encontrado (error)",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/999/completar",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "999", "completar"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /juegos/descuento",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/descuento?genero=RPG&porcentaje=0.10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "descuento"],
+              "query": [
+                {
+                  "key": "genero",
+                  "value": "RPG"
+                },
+                {
+                  "key": "porcentaje",
+                  "value": "0.10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /juegos/descuento - Porcentaje invalido (error)",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/descuento?genero=RPG&porcentaje=1.5",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "descuento"],
+              "query": [
+                {
+                  "key": "genero",
+                  "value": "RPG"
+                },
+                {
+                  "key": "porcentaje",
+                  "value": "1.5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /juegos/descuento - Genero no encontrado (error)",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/juegos/descuento?genero=GeneroInexistente&porcentaje=0.10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["juegos", "descuento"],
+              "query": [
+                {
+                  "key": "genero",
+                  "value": "GeneroInexistente"
+                },
+                {
+                  "key": "porcentaje",
+                  "value": "0.10"
+                }
+              ]
+            }
+          },
+          "response": []
         }
-      },
-      "response": []
-    },
-    {
-      "name": "Completar tarea - No en progreso (error)-Adicional",
-      "request": {
-        "method": "PUT",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:8080/tareas/2/completar",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "tareas",
-            "2",
-            "completar"
-          ]
-        }
-      },
-      "response": []
+      ]
     }
   ]
 }
