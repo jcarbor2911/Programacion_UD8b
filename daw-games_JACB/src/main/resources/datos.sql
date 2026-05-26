@@ -1,0 +1,16 @@
+INSERT INTO juego (nombre, genero, plataformas, precio, descargas, fecha_lanzamiento, tipo, completado) VALUES
+('The Witcher 3: Wild Hunt', 'RPG', 'PC, PS4, Xbox One, Switch', 19.99, 50000000, '2015-05-19', 'BASE', 1),
+('The Witcher 3: Blood and Wine', 'RPG', 'PC, PS4, Xbox One, Switch', 9.99, 15000000, '2016-05-31', 'EXPANSION', 0),
+('The Witcher 3: Hearts of Stone', 'RPG', 'PC, PS4, Xbox One, Switch', 6.99, 12000000, '2015-10-13', 'EXPANSION', 0),
+('Cyberpunk 2077', 'RPG', 'PC, PS5, Xbox Series X', 29.99, 25000000, '2020-12-10', 'BASE', 0),
+('Cyberpunk 2077: Phantom Liberty', 'RPG', 'PC, PS5, Xbox Series X', 29.99, 8000000, '2023-09-26', 'EXPANSION', 0),
+('Elden Ring', 'RPG', 'PC, PS5, PS4, Xbox', 49.99, 20000000, '2022-02-25', 'BASE', 1),
+('Elden Ring: Shadow of the Erdtree', 'RPG', 'PC, PS5, PS4, Xbox', 34.99, 5000000, '2024-06-21', 'EXPANSION', 0),
+('Counter-Strike 2', 'FPS', 'PC', 0.00, 35000000, '2023-09-27', 'BASE', 0),
+('CS2: Armory Pass', 'FPS', 'PC', 14.99, 3000000, '2024-02-08', 'DLC', 0),
+('Minecraft', 'Sandbox', 'PC, PS4, Xbox, Switch, Mobile', 26.95, 300000000, '2011-11-18', 'BASE', 1),
+('Minecraft: Marketplace Pass', 'Sandbox', 'PC, PS4, Xbox, Switch, Mobile', 3.99, 10000000, '2023-06-22', 'DLC', 0),
+('FIFA 24', 'Deportes', 'PC, PS5, PS4, Xbox Series X, Switch', 39.99, 18000000, '2023-09-29', 'BASE', 0),
+('FIFA 24: FUT Pack Bundle', 'Deportes', 'PC, PS5, PS4, Xbox Series X', 9.99, 4000000, '2023-10-15', 'DLC', 0),
+('Hollow Knight', 'Plataformas', 'PC, PS4, Xbox One, Switch', 14.99, 7000000, '2017-02-24', 'BASE', 1),
+('Hollow Knight: Godmaster', 'Plataformas', 'PC, PS4, Xbox One, Switch', 0.00, 3500000, '2018-08-23', 'DLC', 0);
